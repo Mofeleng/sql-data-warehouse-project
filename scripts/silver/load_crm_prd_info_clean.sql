@@ -1,4 +1,4 @@
-=============================================
+--=============================================
 -- SCRIPT: Silver Layer Load - crm_prd_info
 -- PURPOSE:
 --   This script transforms and loads cleaned product data from
