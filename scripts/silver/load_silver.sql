@@ -174,7 +174,7 @@ BEGIN
 		PRINT '>>Truncating table silver.erp_loc_a101';
 		TRUNCATE TABLE silver.erp_loc_a101;
 
-		PRINT '>>Truncating table silver.erp_loc_a101';
+		PRINT '>>Loading table silver.erp_loc_a101';
 		INSERT INTO silver.erp_loc_a101 (
 			cid,
 			cntry
@@ -195,7 +195,8 @@ BEGIN
 		SET @start_time = GETDATE();
 		PRINT '>>Truncating table  silver.erp_px_cat_g1v2';
 		TRUNCATE TABLE  silver.erp_px_cat_g1v2;
-		PRINT '>>Truncating table  silver.erp_px_cat_g1v2';
+
+		PRINT '>>Loading table  silver.erp_px_cat_g1v2';
 		INSERT INTO silver.erp_px_cat_g1v2 (
 			id,
 			cat,
@@ -224,4 +225,4 @@ BEGIN
 		PRINT 'Error Message: ' + CAST(ERROR_STATE() AS NVARCHAR);
 		PRINT '=============================================';
 	END CATCH
-END	
+END
