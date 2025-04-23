@@ -11,7 +11,8 @@
 --   - Deduplicate by cst_id, keeping the most recent record
 --   - Exclude records with NULL customer IDs
 -- =============================================
-
+---Truncate data before load
+TRUNCATE TABLE silver.crm_cust_info;
 ---Standardized and cleaned data
 INSERT INTO silver.crm_cust_info (
 	cst_id,
