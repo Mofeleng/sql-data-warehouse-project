@@ -17,7 +17,8 @@
 --   - Transformation is based on category integration model
 --   - Only valid, cleaned records are loaded into silver
 -- =============================================
-  
+
+TRUNCATE TABLE silver.crm_prd_info;
 INSERT INTO silver.crm_prd_info (
 	prd_id,
 	prd_key,
