@@ -44,14 +44,14 @@ BEGIN
 			   cst_key,
 			   TRIM(cst_firstname) AS firstname,
 			   TRIM(cst_lastname) AS lastname,
+			   CASE WHEN UPPER(TRIM(cst_marital_status)) = 'M' THEN 'Married'
+					 WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Single'
+					 ELSE 'n/a'
+			        END AS cst_marital_status,
 			   CASE WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
 					WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
 					ELSE 'n/a'
 				END AS cst_gndr,
-				CASE WHEN UPPER(TRIM(cst_marital_status)) = 'M' THEN 'Married'
-					 WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Single'
-					 ELSE 'n/a'
-				END AS cst_marital_status,
 			   cst_create_date
 		FROM (
 			SELECT *,
